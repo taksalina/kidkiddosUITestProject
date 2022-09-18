@@ -11,6 +11,7 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
 public class MainPageTest extends UseCaseBase {
+
     private static MainPage mainPage;
     private static final Logger logger = LogManager.getLogger(MainPageTest.class);
 

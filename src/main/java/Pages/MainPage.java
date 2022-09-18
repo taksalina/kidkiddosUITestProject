@@ -16,10 +16,8 @@ public class MainPage extends BasePage {
     }
 
     public boolean isLogoVisible() {
-        Boolean isVisible = elementExist(LOGO_IMG);
-        return isVisible;
+        return elementExist(LOGO_IMG);
     }
-
     public ContactUsPage openContactUsTab() {
         clickElementByXpath(CONTACT_US_OPTION);
         return new ContactUsPage();
@@ -36,16 +34,16 @@ public class MainPage extends BasePage {
     }
 
     public boolean isHomePageOpened() {
-        Boolean isOpened = elementExist(HOME_BUTTON);
-        return isOpened;
+       return elementExist(HOME_BUTTON);
     }
 
     public MainPage openBooksByLanguageMenu() {
         clickElementByXpath(BOOK_BY_LANGUAGE_MENU);
         return new MainPage();
     }
-public boolean isBookByLanguageOpened(){
-        Boolean isOpened = elementExist(BOOK_BY_LANGUAGE_MENU);
-        return isOpened;
-}
+
+    public boolean isBookByLanguageOpened() {
+        return elementExist(BOOK_BY_LANGUAGE_MENU);
+
+    }
 }

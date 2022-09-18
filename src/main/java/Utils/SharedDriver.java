@@ -3,6 +3,7 @@ package Utils;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
 
@@ -22,9 +23,16 @@ public class SharedDriver {
         switch (browser) {
 
             case CHROME:
+                ChromeOptions options = new ChromeOptions();
+//                options.addArguments("--no-sandbox");
+//                options.addArguments("--disable-dev-shm-usage");
+                options.addArguments("--headless");
+
+
                 WebDriverManager.chromedriver().setup();
-                webDriver = new ChromeDriver();
+                webDriver = new ChromeDriver(options);
                 break;
+
 
             case FIREFOX:
                 WebDriverManager.firefoxdriver().setup();
